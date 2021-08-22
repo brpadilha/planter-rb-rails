@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
 
 <p>
   <strong>Email:</strong>
@@ -10,5 +12,13 @@
   <%= @person.name %>
 </p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<p>
+  <strong>Plants:</strong>
+  <% @person.plants.each do |plant| %>
+    <%= plant.name %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit' , edit_person_path(@person) %> |
+  <%= link_to 'Back' , people_path %>

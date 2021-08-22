@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -7,8 +9,8 @@
 
 <p>
   <strong>Person:</strong>
-  <%= @plant.person_id %>
+  <%= link_to @plant.person.name, person_path(@plant.person) %>
 </p>
 
-<%= link_to 'Edit', edit_plant_path(@plant) %> |
-<%= link_to 'Back', plants_path %>
+<%= link_to 'Edit' , edit_plant_path(@plant) %> |
+  <%= link_to 'Back' , plants_path %>
